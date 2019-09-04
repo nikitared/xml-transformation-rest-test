@@ -1,5 +1,6 @@
 package ru.babaninnv.edisoft.test.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import java.util.Date;
@@ -26,6 +27,7 @@ public class XmlFile {
 
     private String originalName;
 
+    @JsonFormat(pattern="dd-MM-yyyy hh:mm:ss")
     private Date receiveDate;
 
     @Column(columnDefinition = "BLOB")
